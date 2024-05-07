@@ -1,11 +1,11 @@
-:root {
-    --wp--preset--font-size--normal: 16px;
-    --wp--preset--font-size--huge: 42px;
-}
-::selection {
-    color: #fff;
-    background: rgba(0,0,0,.99);
 
+
+:root{
+    --font-size:20px;
+    --color: darkgrey;
+    ---mainfont: "JetBrains Mono", monospace;
+    --gutter: calc(var(--font-size) * 2 );
+    
 }
 @media (min-width: 600px){
     :root{
@@ -14,35 +14,405 @@
 }
 
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 15px;
-    line-height: 1;
-    display: block;
-    margin: 8px;
-}
-
-#menu {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 13px;
-    height: 43px;
-    box-sizing: border-box;
-    display: block;
-}
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+body, h1, h2, p {
     margin: 0;
     padding: 0;
+    font-family: var(---mainfont);
+}
+.heading{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.header, .navbar, nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.intro {
+    width: 100%;
+    height: 530px;
+    padding: 40px 20px;
+    background-size: cover; 
+    background-position:center -150px; 
+
+}
+.description {
+   padding-top: 180px;
+   padding-left: 30px;
+    width: 600px;
+    font-weight: 200;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 16px;
+    color: black;
+    text-align: justify;
+    justify-content: center;
+}
+
+.highlight {
+    font-weight: bold;
+    color: black; 
+}
+.underline{
+    text-decoration: underline;
+}
+
+.logo img {
+    width: 300px; 
+    height: auto;
+}
+
+.latest-projects h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.project {
+    width: 90%; 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 110px;
+ 
+}
+
+.project-image {
+    width: 60%;
+    height: auto;
+    margin-right: 70px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.project-info {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.view-project-link {
+    display: inline-block;
+   text-decoration: underline;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.project h3, .project h4 {
+    margin: 15px 0;
+}
+
+.subheading{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.projecttype{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.text{
+    font-size: 12px;
+    line-height: 25px;
+}
+
+footer {
+    background-color: #181818; 
+   height: 200px;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    margin: 20px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px; 
+}
+
+.site-map, .social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.site-map a, .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.site-map a:hover, .social-links a:hover {
+    color: #ccc; 
+}
+
+/* MOBILE */
+@media (min-width: 375px) and (max-width:800px){
+    .navbar {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        justify-content: right;
+    }
+
+    .navbar li, .navbar a {
+       font-size: 10px;
+       padding: 0;
+    }
+
+    .logo img {
+        width: 200px;
+        padding-top: 25px; 
+    }
+
+    .intro {
+        height: 800px; 
+        object-fit: fill;
+        background-position:center -110px; 
+        background-repeat: no-repeat;
+    }
+
+    .description {
+        padding-top: 100px;
+        padding-left: 10px;
+        width: 100%; 
+        font-size: 14px;
+        text-align: left;
+    }
+    .latest-projects h2 {
+        margin-top: -200px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        padding: 0 0px;
+    }
+
+    .project {
+        width: 100%; 
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .project-image {
+        width: 100%; 
+        height: 100%;
+        object-fit: contain;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .project-info {
+        text-align: justify; 
+        width: 100%;
+    }
+    .site-map a, .social-links a{
+        padding: 2px;
+        font-size: 10px;
+    }
+
+}
+@media (min-width:500px) and (max-width:800px){
+
+    .intro {
+        height: 900px; 
+        object-fit: fill;
+        background-position:center -110px; 
+        background-repeat: no-repeat;
+        align-items: center;
+    
+    }
+    
+   
+    .description {
+        padding-top: 150px;
+        padding-left: 10px;
+        width: 70%; 
+        font-size: 14px;
+        text-align: left;
+        text-align: justify;
+    }
+    .project-info, .project-image{
+        width: 80%;
+    }
+
+}
+@media(min-width:1023px)and(max-width:1100px){
+    .intro {
+        height: 900px; 
+        object-fit: fill;
+        background-position:center -110px; 
+        background-repeat: no-repeat;
+        align-items: center;
+    }
+}
+
+/*NAV BAR-MENU */
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+}
+
+.full-page-menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 55%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 90%;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+}
+
+.full-page-menu a {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 17px;
+    font-size: 50px;
+}
+
+.menu-items {
+    margin-top: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    position: relative;
+    padding: 0 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #fff;  
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;  
+}
+
+/*TABLET */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: black;
+    }
+
+    .navbar nav {
+        display: none; 
+    }
+
+    .full-page-menu {
+        display: none; 
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        color: white;
+        z-index: 9999;
+        text-align: center;
+    }
+
+    .full-page-menu a {
+        display: block;
+        font-size: 36px;
+        padding: 20px;
+        text-decoration: none;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 50px;
+    }
+
+    .menu-items {
+        margin-top: 100px;
+    }
 }
 
 
