@@ -1,8 +1,11 @@
-:root{
-    --font-size:20px;
-    --color: darkgrey;
+:root {
+    --wp--preset--font-size--normal: 16px;
+    --wp--preset--font-size--huge: 42px;
+}
+::selection {
+    color: #fff;
+    background: rgba(0,0,0,.99);
 
-    --gutter: calc(var(--font-size) * 2 );
 }
 @media (min-width: 600px){
     :root{
@@ -11,20 +14,35 @@
 }
 
 
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: var(--font-size);
-    padding-bottom: calc(var(--gutter) *3) ;
-    padding-left: var(--gutter) ;
-    padding-right: var(--gutter) ;
-    padding-top: calc(var(--gutter) *3) ;
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--gutter);
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    line-height: 1;
+    display: block;
+    margin: 8px;
 }
 
-h1{
-    color: var(--color);
-    font-size: calc(var(--font-size) *2);
-
+#menu {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 13px;
+    height: 43px;
+    box-sizing: border-box;
+    display: block;
 }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+
