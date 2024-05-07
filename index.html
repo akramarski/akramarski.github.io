@@ -1,45 +1,120 @@
 <!DOCTYPE html>
 <html>
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link href="assets/reset.css" rel="stylesheet">
-            <link href="assets/style.css" rel="stylesheet">
-            <title>Projects</title>
-        </head>
-<body>
-    <nav id="menu">
-        <div id="hamburger"></div> 
-        <div id="cross"></div>  
-        <div id="logo">
-            <h2 id="biglogo" class="upper size25">                      
-                <a href="/" class="local">Angelica Kramarski S.<br>Portfolio<br>Typography & Interaction - 2024</a>  
-            </h2>
-            
-            <h2 id="smalllogo" class="upper">                        
-                <a href="/" class="local">Angelica Kramarski S.</a>                        
-            </h2>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Angelica Kramarski S. - Creative Designer</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="/assets/reset.css" rel="stylesheet">
+        <link href="/assets/style.css" rel="stylesheet">
+        <script src="content.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://images.squarespace-cdn.com/content/v1/648b353c26f3b509fdef9573/488b021d-4a37-4c40-bf06-c3a0cdac7d79/logo+ak.png?format=1500w" alt="Logo Angelica Kramarski S.">
+                </div>
+                <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.angelicakramarski.com/about">ABOUT</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0);">PROJECTS</a>
+                            <ul class="dropdown-content">
+                                <li><a href="https://www.angelicakramarski.com/product-design">PRODUCT DESIGN</a></li>
+                                <li><a href="https://www.angelicakramarski.com/graphic-design-">GRAPHIC DESIGN</a></li>
+                                <li><a href="https://www.angelicakramarski.com/everything-else">EVERYTHING ELSE</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.angelicakramarski.com/contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     
-        <ul id="main">
-            <li class="upper inline"><a href="https://akramarski.github.io/manuscript/" class="local">Project 1 - Manuscript</a></li>
-            <li class="upper inline"><a href="https://theirusername.github.io/spread" class="local">Project 2 - Spread</a></li>
-            <li class="upper inline"><a href="https://akramarski.github.io/binding/" class="local">Project 3</a></li>
-            <li class="upper inline"><a href="" class="local">About</a></li>
-        </ul>
-    </nav>
-    <h1>My projects</h1>
-    <main>
-        <ol>
-            <li><a href="https://akramarski.github.io/manuscript/">Project 1</a></li>
-            <li><a href="https://theirusername.github.io/spread">Project 2</a></li>
-            <li><a href="https://akramarski.github.io/binding/">Project 3</a></li>
-        </ol>
-    </main>
-    <footer>
-        <p>Angelica Kramarski, &nbsp;2024</p>
-    </footer>
-</body>
+        <main>
+            <section class="intro" style="background-image: url('https://images.squarespace-cdn.com/content/v1/648b353c26f3b509fdef9573/c16060ab-2609-4f3b-8611-19b651ee8ff7/Rille+Mockup+Kit-Recovered.png?format=2500w');">
+                <div class="description"><p>I am Angelica Kramarski, an <span class="highlight">Art Director and Creative Designer</span> based in New York who specializes in <span class="highlight">challenging conventional</span> with creative solutions that push the boundaries of <span class="highlight">visual communication.</span></p>
+                    <br><p>My passion for design is fueled by the belief that every project is an opportunity to <span class="underline">transform and captivate</span>, creating <span class="underline">impactful experiences</span> that <span class="underline">leave a lasting impression.</span></p>
+                </div>
+            </section>
+            <section class="latest-projects">
+                <h2 class="heading"> <span class="underline">LATEST</span> PROJECTS</h2>
+                <div class="projects-container">
+                    <div class="project">
+                        <img src="assets/reinventing.png" alt="Mobile App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="projecttype">CODING | HTML/CSS/JAVASCRIPT</h3>
+                            <h4 class="subheading">RE|INVENTING</h4>
+                            <p class="text">
+                                Design a digital platform that authentically replicates the printed media experience, bridging the gap between digital and print to allow content to transition seamlessly across mediums, combining the nostalgia of print with the interactivity of digital.</p>
+                            <a href="https://akramarski.github.io/functions/" class="view-project-link">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="assets/utopian.png" alt="Mobile App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="projecttype">CODING | HTML/CSS/JAVASCRIPT</h3>
+                            <h4 class="subheading">UTOPIAN REALITIES</h4>
+                            <p class="text">
+                                Develop a web platform coded to transcend traditional grid constraints, enabling content to fluidly occupy space, mirroring ephemeral utopian visions and humanity's eternal search for significance.</p>
+                            <a href="https://akramarski.github.io/links/" class="view-project-link">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="assets/chronicles.png" alt="Mobile App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="projecttype">CODING | HTML/CSS</h3>
+                            <h4 class="subheading">CHRONICLES OF DIGITAL EVOLUTION</h4>
+                            <p class="text">
+                                Craft a platform that mirrors the transition from print to digital, illustrating through each component the publishing industry's progressive shift.</p>
+                            <a href="https://akramarski.github.io/binding/" class="view-project-link">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="assets/italics.png" alt="Mobile App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="projecttype">CODING | HTML/CSS</h3>
+                            <h4 class="subheading">ITALICS</h4>
+                            <p class="text">
+                                Collaborative Project with Sabrina Tseng</p>
+                            <a href="https://sabrina-tseng.github.io/spread/" class="view-project-link">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="assets/digital.png" alt="Mobile App" class="project-image">
+                        <div class="project-info">
+                            <h3 class="projecttype">CODING | HTML/CSS</h3>
+                            <h4 class="subheading">POST-DIGITAL PRINT</h4>
+                            <p class="text">
+                                Manuscript</p>
+                            <a href="https://akramarski.github.io/manuscript/" class="view-project-link">VIEW PROJECT</a>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p class="footer-text">| DRIVEN BY A DESIRE OF CREATING MEANINGFUL CHANGE |</p>
+                <div class="footer-links">
+                    <div class="site-map">
+                        <a href="https://www.angelicakramarski.com/about">ABOUT</a>
+                        <a href="https://www.angelicakramarski.com/contact">CONTACT</a>
+                        <a href="https://drive.google.com/file/d/1DKz_JvZsVe1BgowW5yvvaaVMqR53u3lR/view">RESUME</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/angelicakramarskis/" target="_blank">INSTAGRAM</a>
+                        <a href="www.linkedin.com/in/
+                        angelicakramarski" target="_blank">LINKEDIN</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </html>
+
 </html>
